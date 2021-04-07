@@ -1,4 +1,5 @@
 # nextjs
+
 # Create project
 
 ````
@@ -13,4 +14,17 @@ npm i next react react-dom
 "build": "next build",
 "start": "next start"
 }
+````
+
+````
+mkdir pages
+cd pages 
+touch index.js
+const Index = () =>
+{
+    return (
+        <h1>Main</h1>
+    )
+}
+export default Index
 ````

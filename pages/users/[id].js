@@ -18,7 +18,9 @@ export default function User( { user } )
 export async function getServerSideProps( {params} )
 {
     // console.log( params );
-    const response = await fetch( `https://jsonplaceholder.typicode.com/users/${params.id}` );
+    // const url = `https://jsonplaceholder.typicode.com/users/${params.id}`;
+    const url = `http://localhost:3000/data/1.json`;
+    const response = await fetch( url );
     const user = await response.json();
 
     return {

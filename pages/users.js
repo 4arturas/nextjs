@@ -33,10 +33,13 @@ const Users = () =>
             </MainContainer>;
 }
 export default Users;
-
+// const extension = '';
+const extension = '.json';
 export async function getStaticProps( context )
 {
-    const response = await fetch( 'https://jsonplaceholder.typicode.com/users' );
+    // const url = 'https://jsonplaceholder.typicode.com/users';
+    const url = `http://localhost:3000/data/users.json`;
+    const response = await fetch( url );
     const users = await response.json();
 
     return {

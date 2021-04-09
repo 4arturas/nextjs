@@ -19,7 +19,7 @@ export async function getServerSideProps( {params} )
 {
     // console.log( params );
     // const url = `https://jsonplaceholder.typicode.com/users/${params.id}`;
-    const url = `http://localhost:3000/data/1.json`;
+    const url = `http://localhost:3000/data/${params.id}.json`;
     const response = await fetch( url );
     const user = await response.json();
 

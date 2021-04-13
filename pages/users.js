@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import MainContainer from "../components/MainContainer";
+
+let counter = 0;
 const Users = ( {users} ) =>
 {
 /*
@@ -19,7 +21,7 @@ const Users = () =>
     }, []);
     */
 
-    console.log( 'client: ' + Math.random() );
+    console.log( 'client: ' + (counter++) );
     return <MainContainer keywords="users">
                 <h1>Users</h1>
                 <ul>
@@ -38,7 +40,7 @@ export default Users;
 const extension = '.json';
 export async function getStaticProps( context )
 {
-    console.log( 'server: ' + Math.random() );
+    console.log( 'server: ' + (counter++) );
     const url = 'https://jsonplaceholder.typicode.com/users';
     // const url = `http://localhost:3000/data/users.json?user=a&password=b`;
     const response = await fetch( url );

@@ -4,7 +4,6 @@ import MainContainer from "../../components/MainContainer";
 export default function User( { user } )
 {
     const router = useRouter();
-    console.log( router );
     return (
         <MainContainer keywords={user.name}>
             <div className={styles.user}>

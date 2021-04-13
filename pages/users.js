@@ -19,6 +19,7 @@ const Users = () =>
     }, []);
     */
 
+    console.log( 'client: ' + Math.random() );
     return <MainContainer keywords="users">
                 <h1>Users</h1>
                 <ul>
@@ -37,8 +38,9 @@ export default Users;
 const extension = '.json';
 export async function getStaticProps( context )
 {
-    // const url = 'https://jsonplaceholder.typicode.com/users';
-    const url = `http://localhost:3000/data/users.json`;
+    console.log( 'server: ' + Math.random() );
+    const url = 'https://jsonplaceholder.typicode.com/users';
+    // const url = `http://localhost:3000/data/users.json?user=a&password=b`;
     const response = await fetch( url );
     const users = await response.json();
 

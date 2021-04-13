@@ -16,7 +16,7 @@ const MainContainer = ( { children, keywords } ) =>
             <style jsx>
                 {`
                     .navbar {
-                        background-color: orange;
+                        background-color: black;
                         padding: 15px;                    
                     }                
                 `}
